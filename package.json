@@ -1,0 +1,26 @@
+{
+  "name": "gulpjs",
+  "version": "1.0.0",
+  "description": "gulpJs example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackylong1992/gulpJs.git"
+  },
+  "author": "jacky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackylong1992/gulpJs/issues"
+  },
+  "homepage": "https://github.com/jackylong1992/gulpJs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-js-minify": "0.0.3",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.3"
+  }
+}
