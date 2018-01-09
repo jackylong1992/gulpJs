@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' ng-app="myApp">
     <head>
         <meta charset='UTF-8'>
         <title>gulpJS examle web app</title>
     </head>
-    <body>
+    <body ng-controller="myController">
         Hello World!!!
+        <p> bind data = {{bindData}} </p>
+        <input type="text" ng-model="bindData">
         <script src='app.js'></script>
     </body>
 </html>

@@ -1,11 +1,12 @@
-console.log("hello from main");
-console.log("not sure this has source map or not");
-// this time I use uglify
-var long_varialbename = "jacky";
-console.log(long_varialbename);
 
-function jacky () {
-    var local_var = 1;
-    local_var++;
-    console.log(local_var);
-}
+
+angular.module('myApp', [])
+// .run(['$rootScope',function ($rootScope) {
+//     console.log("jump to run", $rootScope); // cannot do that, because at this time, there is no binding yet
+// }])
+.controller('myController', ['$scope' , '$rootScope',function ($scope, $rootScope) {
+    $scope.bindData = 'jacky';
+    console.log("jump to controller");
+    console.log($rootScope);
+    console.log($scope);
+}]);
