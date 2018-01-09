@@ -1,2 +1,6 @@
 Step 1: 
 This version can run success fully with remove/reclone
+TODO:
+Integrate jQuery, AngularJS
+Question: how to guarantee jQuery is load first???
+Integrate sourcemap and minify together
