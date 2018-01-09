@@ -4,3 +4,10 @@ TODO:
 Integrate jQuery, AngularJS
 Question: how to guarantee jQuery is load first???
 Integrate sourcemap and minify together
+
+Step 2:
+Notice: gulp uglify does not change name of GLOBAL variable, just local
+gulp-uglify support variable of option, powerful option:
+https://github.com/mishoo/UglifyJS2#parse-options
+DONE:
+change gulp-js-minify by gulp-uglify, which is better by supporting sourcemap and more option
