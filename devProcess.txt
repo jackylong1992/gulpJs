@@ -11,3 +11,7 @@ gulp-uglify support variable of option, powerful option:
 https://github.com/mishoo/UglifyJS2#parse-options
 DONE:
 change gulp-js-minify by gulp-uglify, which is better by supporting sourcemap and more option
+Step 3:
+TODO: 
+find different way to include library (jQuery, angular by require())
+discover browserify()

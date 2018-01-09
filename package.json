@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jackylong1992/gulpJs#readme",
   "devDependencies": {
+    "angular": "^1.6.8",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
@@ -24,6 +25,9 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.3",
     "gulp-uglify": "^3.0.0",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.5.1",
     "pump": "^2.0.0",
     "uglify-js": "^3.3.5"
   }
