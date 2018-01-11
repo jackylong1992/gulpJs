@@ -16,6 +16,9 @@ var options = {
     }
 }
 
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+
 /*scripts:development
 * minify: disable
 * souremaps: enable
@@ -23,24 +26,36 @@ var options = {
 */
 gulp.task('scripts:development', function() {
     /*in this scenario use minifijs() */
-    // return gulp.src('./src/script/*.js')
-    //     .pipe(sourcemaps.init())
-    //     .pipe(concat('app.js'))
-    //     .pipe(sourcemaps.write())
-    //     //.pipe(minifyjs())
-    //     .pipe(gulp.dest('./dist/'));
+    gulp.src('./src/script/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(concat('app.js'))
+    .pipe(sourcemaps.write())
+    //.pipe(minifyjs())
+    .pipe(gulp.dest('./dist/'));
+
+    return browserify({
+        entries: './dist/app.js',
+        debug: true
+    }).bundle().pipe(source('app.bundle.js')).pipe(gulp.dest('./dist/'));
 
     /*in this scenario use uglify-js() which is much more powerfull with option */
-    pump([
-        gulp.src(['./src/vendor/jquery.min.js',
-        './src/vendor/angular.min.js',
-        './src/script/*.js']), // try to control the order
-        sourcemaps.init(),
-        concat('app.js'),
-        minify(options),
-        sourcemaps.write(),
-        gulp.dest('./dist/')
-    ]);
+    // pump([
+    //     gulp.src(['./src/vendor/jquery.min.js',
+    //     './src/vendor/angular.min.js',
+    //     './src/script/*.js']), // try to control the order
+    //     sourcemaps.init(),
+    //     concat('app.js'),
+    //     minify(options),
+    //     sourcemaps.write(),
+    //     gulp.dest('./dist/')
+    // ]);
+    /**there is better way, using browserify */
+    // return browserify({entries: ['require.js']})
+    // .bundle()
+    // //Pass desired output filename to vinyl-source-stream
+    // .pipe(source('bundle.js'))
+    // // Start piping stream to tasks!
+    // .pipe(gulp.dest('./dist/'));
 });
 
 /*scripts:release

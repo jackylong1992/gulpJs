@@ -1,4 +1,5 @@
-
+require('jQuery');
+require('angular');
 
 angular.module('myApp', [])
 // .run(['$rootScope',function ($rootScope) {
@@ -20,6 +21,7 @@ angular.module('myApp', [])
         link : {
             post : function (scope, iElem, iAttrs) {
                 console.log('inside my post link funciton');
+                console.log("iElem", iElem);
                 // scope.name = "jacky";
                 scope.bindData = {};
                 scope.bindData.name = "jacky";
